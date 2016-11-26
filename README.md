@@ -5,6 +5,7 @@ Just a handful of snippets to accelerate the implementation of Properties, Comma
 2. Open Visual Studio
 3. Go to Tools -> Code Snippets Manager -> Add
 4. Done!
+
 ## PropertyChangedEventHandler (
 Use 'inpc' snippet. (File INPC.snippet)
 ```csharp
