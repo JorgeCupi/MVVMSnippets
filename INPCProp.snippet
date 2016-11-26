@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>INotifyPropertyChanged Property</Title>
+			<Author>Jorge Cupi</Author>
+			<Description>Implements a property that supports INotifyPropertyChanged</Description>
+			<Shortcut>propi</Shortcut>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>myVar</ID>
+                    <ToolTip>Replace the private variable.</ToolTip>
+                    <Default>myVar</Default>
+                </Literal>
+                <Literal>
+                    <ID>myProp</ID>
+                    <ToolTip>Replace the public property.</ToolTip>
+                    <Default>myProp</Default>
+                </Literal>
+                <Literal>
+                    <ID>type</ID>
+                    <ToolTip>Replace the variable type.</ToolTip>
+                    <Default>string</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="CSharp">
+                <![CDATA[private $type$ _$myVar$;
+                public $type$ $myProp$
+                {
+                    get { return _$myVar$; }
+                    set
+                    {
+                        _$myVar$ = value;
+                        OnPropertyChanged("$myProp$");
+                    }
+                }
+                
+				]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>
