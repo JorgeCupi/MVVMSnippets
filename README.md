@@ -1,7 +1,12 @@
 # MVVMSnippets
 Just a handful of snippets to accelerate the implementation of Properties, Commands, Collections and the OnPropertyChanged method
-
-## PropertyChangedEventHandler 
+## How to add this snippets to Visual Studio?
+1. Download the snippets you want to use
+2. Open Visual Studio
+3. Go to Tools -> Code Snippets Manager -> Add
+4. Done!
+## PropertyChangedEventHandler (
+Use 'inpc' snippet. (File INPC.snippet)
 ```csharp
 public event PropertyChangedEventHandler PropertyChanged;
     protected void OnPropertyChanged(string propertyName)
@@ -12,6 +17,7 @@ public event PropertyChangedEventHandler PropertyChanged;
 ```
 
 ## Full property supporting PropertyChanged
+Use 'propi' snippet. (File INPCProp.snippet)
 ```csharp
    private string _myVar;
         public string myProp
@@ -26,6 +32,7 @@ public event PropertyChangedEventHandler PropertyChanged;
 ```
 
 ## Full ObservableCollection property supporting PropertyChanged
+Use 'propcol' snippet. (File INPCCol.snippet)
 ```csharp    
     private ObservableCollection<string> _myVar;
         public ObservableCollection<string> myProp
@@ -49,6 +56,7 @@ public event PropertyChangedEventHandler PropertyChanged;
 ```
 
 ## Command implementation
+Use 'xcom' snippet. (File INPCCommand.snippet)
 ```csharp 
     public ICommand myMethodCommand { get; set; }
         public void myMethod()	
