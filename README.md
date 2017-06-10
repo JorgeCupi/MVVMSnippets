@@ -18,52 +18,52 @@ public event PropertyChangedEventHandler PropertyChanged;
 ```
 
 ## Full property supporting PropertyChanged
-Use 'propi' snippet. (File INPCProp.snippet)
+Use 'propx' snippet. (File INPCProp.snippet)
 ```csharp
-   private string _myVar;
-        public string myProp
+   private string _PropertyName;
+        public string PropertyName
         {
-            get { return _myVar; }
+            get { return _PropertyName; }
             set
             {
-                _myVar = value;
-                OnPropertyChanged("myProp");
+                _PropertyName = value;
+                OnPropertyChanged("PropertyName");
             }
         }
 ```
 
 ## Full ObservableCollection property supporting PropertyChanged
-Use 'propcol' snippet. (File INPCCol.snippet)
+Use 'propxcol' snippet. (File INPCCol.snippet)
 ```csharp    
-    private ObservableCollection<string> _myVar;
-        public ObservableCollection<string> myProp
+    private ObservableCollection<string> _PropertyName;
+        public ObservableCollection<string> PropertyName
         {
-            get { return _myVar; }
+            get { return _PropertyName; }
             set
             {
-                _myVar = value;
-                OnPropertyChanged("myProp");
+                _PropertyName = value;
+                OnPropertyChanged("PropertyName");
             }
         }
 
-        private void myProp_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
+        private void PropertyName_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
-            OnPropertyChanged("myProp");
+            OnPropertyChanged("PropertyName");
         }
         //ToDo:
         //Insert this on your constructor:
-        myProp = new ObservableCollection<string>();
-        myProp.CollectionChanged += myProp_CollectionChanged;
+        PropertyName = new ObservableCollection<string>();
+        PropertyName.CollectionChanged += PropertyName_CollectionChanged;
 ```
 
 ## Command implementation
 Use 'xcom' snippet. (File INPCCommand.snippet)
 ```csharp 
-    public ICommand myMethodCommand { get; set; }
-        public void myMethod()	
+    public ICommand MethodNameCommand { get; set; }
+        public void MethodName()	
         {
             // Copy & Paste this into your Constructor:
-            myMethodCommand = new Command(myMethod);
+            MethodNameCommand = new Command(MethodName);
 
             // ToDo: Your work goes here:
         }

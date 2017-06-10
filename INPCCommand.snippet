@@ -9,19 +9,25 @@
 			<Shortcut>xcom</Shortcut>
         </Header>
         <Snippet>
+            <Imports>
+                <Import>
+                    <Namespace>using System.Windows.Input;</Namespace>
+                    <Namespace>using Xamarin.Forms;</Namespace>
+                </Import>
+            </Imports>
             <Declarations>
                 <Literal>
-                    <ID>myMethod</ID>
+                    <ID>MethodName</ID>
                     <ToolTip>Replace the private variable.</ToolTip>
-                    <Default>myMethod</Default>
+                    <Default>MethodName</Default>
                 </Literal>
             </Declarations>
             <Code Language="CSharp">
-                <![CDATA[public ICommand $myMethod$Command { get; set; }
-                public void $myMethod$()
+                <![CDATA[public ICommand $MethodName$Command { get; set; }
+                public void $MethodName$()
                 {
                     // Copy & Paste this into your Constructor:
-                    $myMethod$Command = new Command($myMethod$);
+                    $MethodName$Command = new Command($MethodName$);
 
                     // ToDo: Your work goes here:
                 }]]>
